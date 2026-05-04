@@ -1,0 +1,25 @@
+.footer {
+	margin-top: 1.5rem;
+	padding: 2rem 1rem 5.8rem;
+	text-align: center;
+	border-top: 1px solid rgba(124, 198, 255, 0.2);
+	background: rgba(5, 12, 24, 0.62);
+}
+
+.footer_logo {
+	font-size: 1.35rem;
+	font-weight: 600;
+}
+
+.footer_links {
+	margin: 1rem 0;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	flex-wrap: wrap;
+}
+
+.footer_copy {
+	color: var(--color-light);
+	font-size: 0.9rem;
+}

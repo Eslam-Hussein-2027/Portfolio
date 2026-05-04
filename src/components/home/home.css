@@ -1,0 +1,107 @@
+.home{
+    position: relative;
+    min-height: 100vh;
+    padding-top: 92px;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.home_container{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 760px;
+    padding: 2.8rem;
+    border-radius: 1.4rem;
+    background: rgba(5, 16, 30, 0.46);
+    backdrop-filter: blur(7px);
+    border: 1px solid rgba(124, 198, 255, 0.18);
+    box-shadow: 0 26px 70px rgba(1, 8, 18, 0.54);
+}
+
+.btns{
+    display: flex;
+    gap: 1.2rem;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.home_cover,
+.home_overlay,
+.home_texture {
+    position: absolute;
+    inset: 0;
+}
+
+.home_cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 28%;
+    filter: saturate(1.08) contrast(1.05);
+}
+
+.home_overlay {
+    z-index: 1;
+    background:
+        radial-gradient(circle at 14% 12%, rgba(124, 198, 255, 0.34), transparent 38%),
+        radial-gradient(circle at 84% 88%, rgba(62, 199, 183, 0.24), transparent 40%),
+        linear-gradient(165deg, rgba(4, 12, 24, 0.84), rgba(4, 12, 24, 0.54));
+}
+
+.home_texture {
+    z-index: 1;
+    opacity: 0.12;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 36px 36px;
+}
+
+.home_container h4{
+    font-size: 1.4rem;
+}
+
+.home_container h1 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1.05;
+    margin: 0.35rem 0 0.9rem;
+    text-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
+}
+
+.home_badge {
+    margin: 0 auto 0.65rem;
+    width: fit-content;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(124, 198, 255, 0.2);
+    border: 1px solid rgba(124, 198, 255, 0.34);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.home_intro {
+    max-width: 640px;
+    margin: 0.3rem auto 0;
+    color: rgba(242, 247, 255, 0.86);
+}
+
+@media (max-width: 600px) {
+    .home {
+        padding-top: 76px;
+    }
+
+    .home_container {
+        padding: 1.4rem 1rem;
+    }
+
+    .btns {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
+    .home_container h4 {
+        font-size: 1.06rem;
+    }
+}

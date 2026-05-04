@@ -1,0 +1,39 @@
+.floating_nav {
+	position: fixed;
+	left: 50%;
+	bottom: 1.2rem;
+	transform: translateX(-50%);
+	z-index: 20;
+	display: flex;
+	gap: 0.45rem;
+	padding: 0.45rem;
+	border-radius: 999px;
+	background: rgba(6, 15, 28, 0.78);
+	border: 1px solid rgba(124, 198, 255, 0.24);
+	backdrop-filter: blur(10px);
+}
+
+.floating_nav a {
+	padding: 0.45rem 0.72rem;
+	border-radius: 999px;
+	font-size: 0.8rem;
+	color: var(--color-light);
+}
+
+.floating_nav a:hover {
+	color: var(--color-white);
+	background: var(--color-primary-variant);
+}
+
+@media (max-width: 700px) {
+	.floating_nav {
+		width: min(94vw, 450px);
+		justify-content: space-between;
+		gap: 0.2rem;
+	}
+
+	.floating_nav a {
+		font-size: 0.67rem;
+		padding: 0.35rem 0.45rem;
+	}
+}

@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --color-bg: #09111f;
+    --color-bg-variant: #111f38;
+    --color-surface: rgba(12, 26, 48, 0.74);
+    --color-primary: #3ec7b7;
+    --color-primary-variant: rgba(62, 199, 183, 0.22);
+    --color-secondary: #7cc6ff;
+    --color-white: #f2f7ff;
+    --color-light: rgba(242, 247, 255, 0.72);
+    --transition: all 0.3s ease;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background:
+        radial-gradient(circle at 12% 14%, rgba(124, 198, 255, 0.15), transparent 26%),
+        radial-gradient(circle at 88% 74%, rgba(62, 199, 183, 0.13), transparent 30%),
+        var(--color-bg);
+    color: var(--color-white);
+    line-height: 1.7;
+    background-attachment: fixed;
+}
+
+.container{
+    width: min(1120px, 88%);
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    letter-spacing: 0.01em;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+section{
+    padding: 6rem 0;
+}
+
+.text-light{
+    color: var(--color-light);
+}
+
+.section{
+    position: relative;
+}
+
+.section_kicker{
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.78rem;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.section_title{
+    text-align: center;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin-bottom: 2rem;
+}
+
+a{
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+a:hover{
+    color: var(--color-white);
+}
+
+.btn{
+    width: max-content;
+    display: inline-block;
+    padding: 0.78rem 1.25rem;
+    border-radius: 0.65rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+    font-weight: 500;
+    background: rgba(62, 199, 183, 0.08);
+}
+
+.btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(62, 199, 183, 0.26);
+}
+
+.btn-primary{
+    background: var(--color-primary);
+    color: #041118;
+    border-color: var(--color-primary);
+}
+
+img{
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+/* media quires tablet*/
+@media (max-width: 1024px) {
+    .container{
+        width: 85%;
+    }
+    section{
+        padding: 5rem 0;
+    }
+
+}
+
+/* media quires moblie*/
+
+
+@media (max-width: 600px) {
+    .container{
+        width: 90%;
+    }
+    section{
+        padding: 4rem 0;
+    }
+
+}
