@@ -36,6 +36,7 @@ const PROJECTS = [
     description:
       'Official Arabic (RTL) website for The Great Arabia Insurance Company. A React frontend backed by a Laravel JSON API for products, business sectors, downloadable forms and a rate-limited contact form. The site ships with bundled fallback content, so it still loads if the API is down.',
     tags: ['React 19', 'React Router', 'Laravel 13', 'REST API', 'RTL'],
+    liveUrl: 'https://akobrah.ly/',
     repoUrl: 'https://github.com/Eslam-Hussein-2027/a-kobrah',
     cover: {
       type: 'logo',
