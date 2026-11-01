@@ -13,6 +13,23 @@
 	background: var(--color-surface);
 }
 
+/* Featured project: full width, image beside the text on desktop */
+.project_card--featured {
+	grid-column: 1 / -1;
+	display: grid;
+	grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+}
+
+.project_card--featured .project_image {
+	aspect-ratio: auto;
+	min-height: 20rem;
+}
+
+.project_card--featured .project_content {
+	justify-content: center;
+	padding: 1.6rem;
+}
+
 .project_image {
 	position: relative;
 	aspect-ratio: 16 / 10;
@@ -150,6 +167,19 @@
 @media (max-width: 900px) {
 	.projects_grid {
 		grid-template-columns: 1fr;
+	}
+
+	.project_card--featured {
+		display: flex;
+	}
+
+	.project_card--featured .project_image {
+		aspect-ratio: 16 / 10;
+		min-height: 0;
+	}
+
+	.project_card--featured .project_content {
+		padding: 1rem;
 	}
 }
 

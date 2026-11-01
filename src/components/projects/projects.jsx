@@ -1,12 +1,12 @@
 import './projects.css'
 import thumbA from '../../assets/portfolio1.jpg'
-import thumbB from '../../assets/portfolio2.jpg'
 import kobrahLogo from '../../assets/kobrah-logo.png'
 
 /*
  * Each project supports:
  *  - title, description           (required)
  *  - badge                        e.g. 'Graduation Project', 'New'
+ *  - featured                     spans the full grid width (desktop)
  *  - tags                         tech stack shown as pills
  *  - liveUrl                      shows a "Live Demo" button
  *  - repoUrl                      shows a "Source Code" button
@@ -19,6 +19,7 @@ const PROJECTS = [
   {
     title: 'Herfaa — Craftsmen Booking Platform',
     badge: 'Graduation Project',
+    featured: true,
     description:
       'A bilingual (Arabic / English) marketplace that connects customers in Libya with verified craftsmen: carpenters, plumbers, electricians and painters. Customers search by trade and city, book jobs and leave reviews. Craftsmen manage their services, portfolio and incoming bookings, and admins approve providers and moderate content.',
     tags: ['React', 'Laravel 13', 'Sanctum Auth', 'Tailwind CSS', 'React Query', 'REST API', 'i18n'],
@@ -50,12 +51,6 @@ const PROJECTS = [
     description: 'A deployed e‑commerce demo showcasing product listings, cart flow and responsive layouts.',
     liveUrl: 'https://e-commerce-eta-lyart-27.vercel.app/',
     image: thumbA,
-  },
-  {
-    title: 'E-Commerce Demo (B)',
-    description: 'Alternate e‑commerce implementation with login flow and checkout.',
-    liveUrl: 'https://e-commerce-website-mu-navy.vercel.app/login#',
-    image: thumbB,
   },
 ]
 
@@ -108,7 +103,7 @@ function Projects() {
 
         <div className='projects_grid'>
           {PROJECTS.map((p) => (
-            <article className='project_card' key={p.title}>
+            <article className={`project_card${p.featured ? ' project_card--featured' : ''}`} key={p.title}>
               {(p.image || p.cover) && (
                 <div className='project_image'>
                   {p.badge && <span className='project_badge'>{p.badge}</span>}
